@@ -1,0 +1,11 @@
+<!-- 头部导航栏部分 -->
+<view class="top-nav">
+        <view class="top-ava">
+        <image src="/images/tempAva.jpg" style="width: 110rpx; height: 110rpx; display: inline-block; box-sizing: border-box"></image>
+        </view>
+        <view class="top-title">
+                <text>单词小本本</text>
+        </view>
+
+
+</view>

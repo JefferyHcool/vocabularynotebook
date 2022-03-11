@@ -1,0 +1,38 @@
+/* components/nav/nav.wxss */
+.top-nav{
+        /* margin-top: 1rem; */
+        /* background-color: rgb(247, 0, 0); */
+        height: 9rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        box-shadow:  0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+.top-title{
+        margin-top: 60px;
+        width: 70%;
+        height: 32PX;
+        font-size: 24PX;
+        /* font-weight: bold; */
+        /* background-color: aqua; */
+        /* text-align: center; */
+}
+.top-title text{
+        margin-left: 20px;
+}
+.top-ava{
+        margin-top: 55px;
+        /* background-color: bisque; */
+        width: 60px;
+
+}
+.top-ava image{
+        margin-top: 5px;
+        height: 60px;
+        width: 100%;
+        margin-left: 20px;
+        border-radius: 50%;
+}
