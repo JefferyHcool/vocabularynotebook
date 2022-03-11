@@ -1,10 +1,11 @@
 <!-- 头部导航栏部分 -->
 <view class="top-nav">
         <view class="top-ava">
-        <image src="/images/tempAva.jpg" style="width: 110rpx; height: 110rpx; display: inline-block; box-sizing: border-box"></image>
+                <image  style="width: 90rpx; height: 90rpx; display: block; box-sizing: border-box" mode="aspectFill" src="/images/tempAva.jpg"></image>
         </view>
         <view class="top-title">
-                <text>单词小本本</text>
+               <text class="greet-title"> 早上好</text>
+                <text class="title">单词小本本</text>
         </view>
 
 

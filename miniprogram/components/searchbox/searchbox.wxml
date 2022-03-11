@@ -1,0 +1,6 @@
+<!--components/searchbox/searchbox.wxml-->
+<view class="box">
+        <view class="search">
+                <input bindinput="word"  type="text" search placeholder="搜索单词..."/>
+        </view>
+</view>
