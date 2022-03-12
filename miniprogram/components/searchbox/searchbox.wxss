@@ -1,4 +1,6 @@
 /* components/searchbox/searchbox.wxss */
+@import "/colorui/icon.wxss";
+@import "/colorui/main.wxss";
 .box{   
         margin-top: 20rpx;
         width: 100%;
@@ -14,15 +16,21 @@
         width: 80%;
         height: 100%;
         border-radius: 20px;
-        box-shadow:  0px 1px 2px 1px rgba(0,0,0,0.3);
+        box-shadow:  0px 1px 2px 0.1px rgba(0,0,0,0.3);
         display: flex;
-        /* justify-content: center; */
+        justify-content: space-between;
         align-items: center;
 
 }
 .search input{
         height: 80%;
+        width: 80%;
         /* background-color: blue; */
         margin-left: 40rpx;
         font-size: 20px;
+}
+.search .size{
+        width: 18%;
+        font-size: 50rpx;
+        
 }

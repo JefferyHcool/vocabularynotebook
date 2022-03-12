@@ -1,3 +1,5 @@
 <!--pages/index/index.wxml-->
 <nav></nav>
 <searchbox></searchbox>
+<!-- <button bindtap="getUserProfile">登录</button> -->
+<wordcards></wordcards>

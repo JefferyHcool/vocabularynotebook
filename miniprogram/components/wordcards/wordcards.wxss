@@ -1,0 +1,115 @@
+/* components/wordcards/wordcards.wxss */
+@import "/colorui/icon.wxss";
+@import "/colorui/main.wxss";
+.box{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 360rpx;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+
+
+ 
+}
+.box .card{
+  position: relative;
+  height: 100%;
+  width: 90%;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.267);
+}
+
+.bg{
+
+
+  /* z-index: -0.2; */
+  position: absolute;
+  top: 0;
+  /* float:left; */
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 247, 237);
+  opacity:0.5;
+  border-radius: 10px;
+
+
+}
+.word{
+  /* float: left; */
+  /* margin-top: -10px; */
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  /* background-color: rgb(255, 255, 255); */
+  border-radius: 10px;
+
+  /* overflow: hidden; */
+}
+.circle{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.commen{
+  height: 15px;
+  width: 15px;
+  margin: 5px 5px 2px 2px ;
+  background-color: burlywood;
+  border-radius: 50%;
+}
+.red{
+  background-color:#EF7568 ;
+}
+.green{
+  background-color:#6CC663 ;
+}
+.yellow{
+  background-color: #FDD075;
+}
+.word-part{
+  height: 85%;
+  /* background-color: cadetblue; */
+  display: flex;
+  flex-direction: column;
+}
+.eng{
+  /* height: 80rpx; */
+  font-size: 80rpx;
+  font-weight: bold;
+  letter-spacing: 0ch;
+  margin: 5px 0 0px 15px;
+  font-family: fantasy;
+  /* background-color: #FDD075; */
+}
+.yinbiao{
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #000000af;
+  margin: 5px 10px 0px 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.zh{
+  font-size: 35rpx;
+  margin: 5px 0 0px 15px;
+  font-weight: bold;
+
+}
+.del{
+  z-index: 1;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 60rpx;
+  width: 60rpx;
+  color: rgb(0, 0, 0);
+  /* background-color: aqua; */
+}
+.cuIcon-roundclose{
+  font-size: 100px;
+}

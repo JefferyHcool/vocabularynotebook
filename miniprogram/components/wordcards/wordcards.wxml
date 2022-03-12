@@ -1,0 +1,23 @@
+<!--components/wordcards/wordcards.wxml-->
+<view class="box">
+  <view class="card radius shadow-blur">
+
+    <view class="word">
+      <view class="circle">
+        <view class="commen red"></view>
+        <view class="commen yellow"></view>
+        <view class="commen green"></view>
+      </view>
+      <view class="word-part">
+        <text class="eng">sucess</text>
+        <text class="yinbiao">英 [səkˈses] 美 [səkˈses] </text>
+        <text class="zh">n. 成功，胜利；发财，成名；成功的人</text>
+        <text class="level"></text>
+      </view>
+    </view>
+
+    <image class="bg" src="/images/bg-temp.png"></image>
+
+  </view>
+  
+</view>
