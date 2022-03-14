@@ -2,7 +2,8 @@
         "usingComponents": {
                 "nav":"/components/nav/nav",
                 "searchbox":"/components/searchbox/searchbox",
-                "wordcards":"/components/wordcards/wordcards"
+                "wordcards":"/components/wordcards/wordcards",
+                "funcMeun":"/components/funcMeun/funcMeun"
         }
 
 }

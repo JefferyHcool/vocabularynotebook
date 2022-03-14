@@ -25,10 +25,47 @@ Component({
                         this.getUserAva(),
                         this.greetWord_check()
                  },
+                ready:function(){this.getUserAva()},
                 moved: function () { },
                 detached: function () { },
               },
         methods: {
+                  Checklogin(){
+    var flag=wx.getStorageSync('userinfo')//查看用户是否有登录信息
+    // 确认微信是否登录过
+    if(!flag){
+      wx.showModal({
+        title:"提示",
+        content:"你还未登录，是否登录",
+        confirmText:'确认',
+        confirmColor:'confirmColor',
+        cancelColor: 'cancelColor',
+        success:res=>{
+          // console.log(res)
+          if (res.confirm){
+            wx.getUserProfile({
+              desc: '登录解锁更多功能',
+              success:res=>{
+                // console.log(res.userInfo)
+                wx.setStorageSync('userinfo', res.userInfo)
+                wx.startPullDownRefresh()
+
+              },
+              fail:err=>{
+                console.log(err)
+              }
+            })
+          }
+  
+        }
+      })
+      // 登录提示
+    }
+
+
+
+
+  },
                 // 查看头像文件是否存在
                 getUserAva(){
                         let info=wx.getStorageSync('userinfo')

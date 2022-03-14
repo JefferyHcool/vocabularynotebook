@@ -4,6 +4,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    words:{Word:'',yinbiao:'',zh:'',bg_image:''}
 
   },
 
@@ -12,6 +13,7 @@ Component({
    */
   data: {
 
+    bg_image:'/images/bg-temp.png'
   },
 
   /**

@@ -1,4 +1,6 @@
 // pages/index/index.js
+const db = wx.cloud.database()
+const _ = db.command
 Page({
 
         /**
@@ -8,28 +10,69 @@ Page({
           btnOpac:0.4,
           flag:false,
           isHidden:0,
-          isFold:1
+          isFold:1,
+          words:[
+            {Word:'success',yinbiao:'',zh:'',bg_image:''},
+            {Word:'great',yinbiao:'',zh:'',bg_image:''}
+          ],//单词数据
+          // show:false,//菜单组件显示
+          isShow:true
         },
         /**
          * 显示功能
          */
+        isSign(openid){
+          let id=openid
+          console.log("re")
+          db.collection('user').where({
+            _openid:id,
+          }).get({
+            // openid:_.eq(id),
+           
+            success:res=>{
+              console.log("res",res)
+              if (res.data.length==0){
+                db.collection('user').add({
+                  data:{
+                    openid:id,
+                  }
+                  
+                })
+              }
+            },
+            fail:err=>{
+              console.log("err",err)
+            }
+          })
+          
+        },
+        hidden(){
+          let show=this.data.isShow
+          console.log(this.data.isShow)
+          this.setData({
+            isShow:!show
+          })
+        },
         showFun(e){
+          let btn=this.data.btnOpac
+          let flag=this.data.flag
+          let h=this.data.isHidden
+          let fold=this.data.isFold
           this.setData({
             btnOpac:1,
-            flag:true,
-            isHidden:1,
-            isFold:0
+            flag:!flag,
+            isHidden:!h,
+            isFold:!fold
           })
-          setTimeout(err=>{
-            this.setData({
-              flag:false,
-              isFold:1
-            })
-          },3000)
+          // setTimeout(err=>{
+          //   this.setData({
+          //     flag:false,
+          //     isFold:1
+          //   })
+          // },3000)
           setTimeout(err=>{
             this.setData({
               btnOpac:0.4,
-              isHidden:0,
 
             })
           },4000)
@@ -56,6 +99,14 @@ Page({
                 }
 
         },
+        /**显示功能菜单 */
+        showMeun(){
+          let show=this.data.isShow
+          this.setData({
+            isShow:!show
+          })
+
+        },
         /**
          * 生命周期函数--监听页面加载
          */
@@ -65,6 +116,7 @@ Page({
         //     btnOpac:0.4
         //   })
         // },
+        
         onLoad: function (options) {
 
         },
@@ -73,7 +125,20 @@ Page({
          * 生命周期函数--监听页面初次渲染完成
          */
         onReady: function () {
-
+         let id= wx.getStorageSync('openid')
+          if (!id){
+            wx.cloud.callFunction({
+              name: 'openid',
+              complete: res => {
+                console.log('callFunction test result: ', res.result.openid)
+                this.isSign(res.result.openid)
+                wx.setStorageSync('openid', res.result.openid)
+              }
+            })
+          }
+         
+          // let id=wx.getStorageSync('userinfo')
+          // 
         },
 
         /**

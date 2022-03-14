@@ -1,1 +1,1 @@
-"C:\Program Files (x86)\Tencent\Î¢ÐÅweb¿ª·¢Õß¹¤¾ß\cli.bat" cloud functions deploy --e cloud1-3g5hazh22bd3c9df --n quickstartFunctions --r --project "C:\Users\10634\WeChatProjects\miniprogram-15" --report_first --report
+C:\Program Files (x86)\Tencent\Î¢ï¿½ï¿½webï¿½ï¿½ï¿½ï¿½ï¿½ß¹ï¿½ï¿½ï¿½\cli.bat" cloud functions deploy --e cloud1-3g5hazh22bd3c9df --n quickstartFunctions --r --project "C:\Users\10634\WeChatProjects\miniprogram-15" --report_first --report

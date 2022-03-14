@@ -1,0 +1,19 @@
+<!--components/funcMeun/funcMeun.wxml-->
+<view class="menu-area {{isShow?'':'close'}}">
+  <view class="return">
+    <text class="cuIcon-unfold " bindtap="hidden"></text>
+  </view>
+  <view class="fun">
+    <view class="add-word commen">
+     <image  class='icon'src="/images/icon/笔记本.png"></image>  
+    <view>添加单词</view>
+  </view>
+  <view class="scan-word commen">
+    <image  class='icon'src="/images/icon/扫描.png"></image>  
+    <view>扫描单词</view>
+  </view>
+  <view class="import-word commen">
+    <image  class='icon'src="/images/icon/导入.png"></image>  
+    <view>导入单词</view>
+  </view></view>
+</view>

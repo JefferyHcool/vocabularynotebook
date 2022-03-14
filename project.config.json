@@ -1,69 +1,72 @@
 {
-        "miniprogramRoot": "miniprogram/",
-        "cloudfunctionRoot": "cloudfunctions/",
-        "setting": {
-                "urlCheck": true,
-                "es6": true,
-                "enhance": true,
-                "postcss": true,
-                "preloadBackgroundData": false,
-                "minified": true,
-                "newFeature": true,
-                "coverView": true,
-                "nodeModules": false,
-                "autoAudits": false,
-                "showShadowRootInWxmlPanel": true,
-                "scopeDataCheck": false,
-                "uglifyFileName": false,
-                "checkInvalidKey": true,
-                "checkSiteMap": true,
-                "uploadWithSourceMap": true,
-                "compileHotReLoad": false,
-                "lazyloadPlaceholderEnable": false,
-                "useMultiFrameRuntime": true,
-                "useApiHook": true,
-                "useApiHostProcess": true,
-                "babelSetting": {
-                        "ignore": [],
-                        "disablePlugins": [],
-                        "outputPath": ""
-                },
-                "enableEngineNative": false,
-                "useIsolateContext": false,
-                "userConfirmedBundleSwitch": false,
-                "packNpmManually": false,
-                "packNpmRelationList": [],
-                "minifyWXSS": true,
-                "disableUseStrict": false,
-                "minifyWXML": true,
-                "showES6CompileOption": false,
-                "useCompilerPlugins": false
-        },
-        "appid": "wx37995cad5d88ce08",
-        "projectname": "%E5%8D%95%E8%AF%8D%E5%B0%8F%E6%9C%AC%E6%9C%AC",
-        "libVersion": "2.22.1",
-        "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-        "condition": {
-                "search": {
-                        "list": []
-                },
-                "conversation": {
-                        "list": []
-                },
-                "plugin": {
-                        "list": []
-                },
-                "game": {
-                        "list": []
-                },
-                "miniprogram": {
-                        "list": [
-                                {
-                                        "id": -1,
-                                        "name": "db guide",
-                                        "pathName": "pages/databaseGuide/databaseGuide"
-                                }
-                        ]
-                }
+
+
+  "miniprogramRoot": "miniprogram/",
+
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+    "ignoreUploadUnusedFiles": true
+  },
+  "appid": "wx37995cad5d88ce08",
+  "projectname": "vocabularynotebook",
+  "libVersion": "2.21.4",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide"
         }
+      ]
+    }
+  }
 }

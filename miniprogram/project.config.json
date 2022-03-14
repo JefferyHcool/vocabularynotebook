@@ -40,8 +40,8 @@
         "debugOptions": {
                 "hidedInDevtools": []
         },
+        
         "scripts": {},
-        "cloudfunctionRoot": "cloudfunctions/",
         "staticServerOptions": {
                 "baseURL": "",
                 "servePath": ""
