@@ -3,6 +3,7 @@
 @import "/colorui/main.wxss";
 .box{
   margin-top: 40rpx;
+  margin-bottom: 20rpx;
   width: 100%;
   height: 360rpx;
   /* background-color: aqua; */
@@ -21,6 +22,7 @@
   z-index: 1;
   border-radius: 10px;
   box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.267);
+
 }
 
 .bg{

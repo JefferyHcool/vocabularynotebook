@@ -1,0 +1,75 @@
+@import "/colorui/icon.wxss";
+@import "/colorui/main.wxss";
+.btn-area{
+        z-index:10;
+        position: fixed;
+        height: 110rpx;
+        width: 110rpx;
+        /* background-color: aqua; */
+        right: 20rpx;
+        top: 85%;
+}
+.add-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+      background-color: #a1eafb;
+        border-radius: 50%;
+
+}
+.add-btn{
+        font-size: 90rpx;
+}
+.fun-btn{
+        position: absolute;
+        left: -180rpx;
+        width: 160%;
+        height: 160%;
+        /* background-color: rgb(120, 136, 136); */
+
+}
+.commen{
+        /* color: #fff; */
+        position: absolute;
+        right: 0;
+        background-color:#a1eafb;
+        width: 50%;
+        height: 50%;
+        margin: 10rpx;
+        border-radius: 50%;
+        font-size: 30rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.hidden{
+        display: none;
+}
+.anm{
+        animation: showUp ease-in 0.2s forwards;
+}
+.rev-anm{
+        animation: close ease-out 0.2s forwards ;
+}
+.top{
+        top: 100rpx;
+}
+@keyframes showUp{
+        0% {
+                opacity:0 ;
+        }
+        100%{
+                opacity: 1;
+        }
+}
+@keyframes close{
+        0% {
+                opacity:10 ;
+        }
+        100%{
+                opacity: 0;
+        }
+}

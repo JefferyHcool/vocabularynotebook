@@ -5,26 +5,66 @@ Page({
          * 页面的初始数据
          */
         data: {
+          btnOpac:0.4,
+          flag:false,
+          isHidden:0,
+          isFold:1
+        },
+        /**
+         * 显示功能
+         */
+        showFun(e){
+          this.setData({
+            btnOpac:1,
+            flag:true,
+            isHidden:1,
+            isFold:0
+          })
+          setTimeout(err=>{
+            this.setData({
+              flag:false,
+              isFold:1
+            })
+          },3000)
+          setTimeout(err=>{
+            this.setData({
+              btnOpac:0.4,
+              isHidden:0,
+
+            })
+          },4000)
+        },
+        /**回到顶部 */
+        goTotop(){
+          if (wx.pageScrollTo) {
+ 
+            //   //wx.pageScrollTo(OBJECT)
+            //   基础库 1.4.0 开始支持，低版本需做兼容处理
+            //   将页面滚动到目标位置。
+            //   OBJECT参数说明：
+            //   参数名	类型	必填	说明
+            //   scrollTop	Number	是	滚动到页面的目标位置（单位px）
+            //   duration	Number	否	滚动动画的时长，默认300ms，单位 ms
+                  wx.pageScrollTo({
+                    scrollTop: 0
+                  })
+                } else {
+                  wx.showModal({
+                    title: '提示',
+                    content: '当前微信版本过低，暂无法使用该功能，请升级后重试。'
+                  })
+                }
 
         },
-        getUserProfile(e) {
-                // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
-                // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-                wx.getUserProfile({
-                  desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-                  success: (res) => {
-                        console.log(res.userInfo)
-                    this.setData({
-                      userInfo: res.userInfo,
-                      hasUserInfo: true
-                    })
-                  }
-                })
-              },
-
         /**
          * 生命周期函数--监听页面加载
          */
+
+        // setOpa(){
+        //   this.setData({
+        //     btnOpac:0.4
+        //   })
+        // },
         onLoad: function (options) {
 
         },

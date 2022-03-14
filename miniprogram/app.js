@@ -1,7 +1,42 @@
 // app.js
+wx.cloud.init()
 App({
-  onLaunch: function () {
+  Checklogin(){
+    var flag=wx.getStorageSync('userinfo')//查看用户是否有登录信息
+    // 确认微信是否登录过
+    if(!flag){
+      wx.showModal({
+        title:"提示",
+        content:"你还未登录，是否登录",
+        confirmText:'确认',
+        confirmColor:'confirmColor',
+        cancelColor: 'cancelColor',
+        success:res=>{
+          // console.log(res)
+          if (res.confirm){
+            wx.getUserProfile({
+              desc: '登录解锁更多功能',
+              success:res=>{
+                // console.log(res.userInfo)
+                wx.setStorageSync('userinfo', res.userInfo)
+              },
+              fail:err=>{
+                console.log(err)
+              }
+            })
+          }
+  
+        }
+      })
+      // 登录提示
+    }
 
+
+
+
+  },
+  onLaunch: function () {
+    this.Checklogin()
 
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力');

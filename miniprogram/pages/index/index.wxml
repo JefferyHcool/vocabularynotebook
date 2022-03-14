@@ -3,3 +3,24 @@
 <searchbox></searchbox>
 <!-- <button bindtap="getUserProfile">登录</button> -->
 <wordcards></wordcards>
+<!-- 添加按钮 -->
+<view class="btn-area" >
+        <view class="add-btn" style="opacity: {{btnOpac}}" bindtap="showFun">
+               <text class="{{isFold?'cuIcon-fold':'cuIcon-unfold'}}"></text>
+                <view class="fun-btn {{isHidden?'  ':'hidden'}}">
+                        <view class="add commen {{flag?'anm':'rev-anm'}}">
+                                <view style="font-size: 30px;">+</view>
+                                <view  style="margin-top: -15px;">添加</view>
+                        </view>
+                        <view class="top commen {{flag?'anm':'rev-anm'}}"bindtap="goTotop">
+                               <text class="cuIcon-top "style="font-weight:bold;font-size:35rpx" ></text>
+                                <view style="margin-top: -5px;">顶部</view>
+                        </view>
+                </view>
+        </view>
+</view>
+<wordcards></wordcards>
+<wordcards></wordcards>
+<wordcards></wordcards>
+<wordcards></wordcards>
+<wordcards></wordcards>
