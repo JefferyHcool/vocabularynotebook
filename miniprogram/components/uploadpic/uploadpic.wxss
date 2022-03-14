@@ -1,0 +1,3 @@
+/* components/uploadpic/uploadpic.wxss */
+@import "/colorui/icon.wxss";
+@import "/colorui/main.wxss";

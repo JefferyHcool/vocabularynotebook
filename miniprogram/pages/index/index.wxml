@@ -42,3 +42,5 @@
     <view>导入单词</view>
   </view></view>
 </view>
+<!-- 单词添加卡片 -->
+<wordform close="false"></wordform>

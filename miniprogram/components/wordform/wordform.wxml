@@ -1,0 +1,20 @@
+<!--components/wordform/wordform.wxml-->
+<view class="container {{close?'show.close':''}}">
+        <view class="form">
+              <view class="cu-form-group margin-top">  
+              <input type="text" placeholder="输入单词，多个单词用空格分隔" selection-start="-1"/>
+              </view>
+                <view class="pic">
+                        <!-- <image src="/images/icon/图片添加.png"></image> -->
+                        <uploadpic></uploadpic>
+                </view>
+                <view class="btn">
+                        <button type="primary">确认</button>
+                <button bindtap="close">取消</button>
+                </view>
+	
+                
+	</view>
+        
+        
+</view>

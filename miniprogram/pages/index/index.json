@@ -3,7 +3,8 @@
                 "nav":"/components/nav/nav",
                 "searchbox":"/components/searchbox/searchbox",
                 "wordcards":"/components/wordcards/wordcards",
-                "funcMeun":"/components/funcMeun/funcMeun"
+                "funcMeun":"/components/funcMeun/funcMeun",
+                "wordform":"/components/wordform/wordform"
         }
 
 }

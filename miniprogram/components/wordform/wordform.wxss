@@ -1,0 +1,62 @@
+/* components/wordform/wordform.wxss */
+@import "/colorui/icon.wxss";
+@import "/colorui/main.wxss";
+.container{
+        width: 100%;
+        height: 100%;
+        /* background-color: rgb(0, 0, 0); */
+        position: fixed;
+        top: 0;
+        z-index: 12;
+
+
+}
+.form{
+        width: 95%;
+        height: 500rpx;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 25%;
+        left: 2.5%;
+        z-index: 13;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+
+}
+.form input{
+        margin-top: 30px;
+        /* padding: 20px 20px 0 0; */
+        width: 700rpx;
+        height: 60rpx;
+        /* background-color: rgb(138, 35, 35); */
+        font-size: 40rpx;
+        border: solid   black;
+        border-width: 0px 0 1px 0px;
+}
+.pic{
+        margin-top: 10px;
+        width: 100%;
+        height: 860px;
+        /* background-color: chartreuse; */
+}
+/* .pic image{
+        width: 70px;
+        height: 70px;
+} */
+.btn{
+        background-color: #ffff;
+        height: 600rpx;
+        width: 100%;
+}
+.btn button{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        box-shadow: 1px 0 1px 1px rgba(0, 0, 0, 0.13);
+}
+
+.close{
+        display: none;
+}

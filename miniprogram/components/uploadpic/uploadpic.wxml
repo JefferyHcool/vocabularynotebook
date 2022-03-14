@@ -1,0 +1,11 @@
+<view class="cu-bar bg-white margin-top">
+		<view class="action">
+			背景图片上传（可选）
+		</view>
+
+</view>
+<view class="cu-form-group">
+      <view>
+        <image src="/images/icon/图片添加.png" style="width: 40px;height: 40px;"></image>
+      </view>
+</view>
