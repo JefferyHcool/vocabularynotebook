@@ -48,6 +48,9 @@
 .hidden{
         display: none;
 }
+.hiddens{
+        visibility: hidden;
+}
 .anm{
         animation: showUp ease-in 0.2s forwards;
 }
@@ -75,13 +78,13 @@
 }
 .closemeun{
         display: none;
-      }
+}
 .up{
-        animation: meunshowup 3s forwards;
+        animation: meunshowup 1s forwards;
 }
 @keyframes meunshowup{
 0%{
-        bottom: -100rpx;
+        bottom: -4S00rpx;
 }
 100%{
         bottom: 0;

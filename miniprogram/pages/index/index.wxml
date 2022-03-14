@@ -23,12 +23,13 @@
 </view>
 <wordcards words="{{words[1]}}"></wordcards>
 <wordcards words="{{words[1]}}"></wordcards>
-<view class="menu-area {{isShow?'close':'closed'}}">
+<!-- 菜单界面 -->
+<view class="menu-area {{show?'':'hiddens'}} {{isShow?'up':'close'}} ">
   <view class="return">
     <text class="cuIcon-unfold " bindtap="hidden"></text>
   </view>
   <view class="fun">
-    <view class="add-word commens">
+    <view class="add-word commens" bindtap="addWord">
      <image  class='icon'src="/images/icon/笔记本.png"></image>  
     <view>添加单词</view>
   </view>

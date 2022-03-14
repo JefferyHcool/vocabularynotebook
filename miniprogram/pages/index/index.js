@@ -15,8 +15,8 @@ Page({
             {Word:'success',yinbiao:'',zh:'',bg_image:''},
             {Word:'great',yinbiao:'',zh:'',bg_image:''}
           ],//单词数据
-          // show:false,//菜单组件显示
-          isShow:true
+          show:false,//菜单组件显示
+          isShow:false
         },
         /**
          * 显示功能
@@ -75,7 +75,7 @@ Page({
               btnOpac:0.4,
 
             })
-          },4000)
+          },5000)
         },
         /**回到顶部 */
         goTotop(){
@@ -102,8 +102,10 @@ Page({
         /**显示功能菜单 */
         showMeun(){
           let show=this.data.isShow
+          let shows=this.data.show
           this.setData({
-            isShow:!show
+            isShow:!show,
+            show:true
           })
 
         },
