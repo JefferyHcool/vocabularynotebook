@@ -1,0 +1,7 @@
+<!--components/bookCorver.wxml-->
+<view class="cover shadow1" style="background: {{cover}};">
+        <view class="title">{{bookname}}</view>
+        <view class="desc">{{desc}}</view>
+        <view class="count">{{counts}}词</view>
+        
+</view>

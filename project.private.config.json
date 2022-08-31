@@ -1,0 +1,23 @@
+{
+        "condition": {
+                "plugin": {
+                        "list": []
+                },
+                "game": {
+                        "list": []
+                },
+                "gamePlugin": {
+                        "list": []
+                },
+                "miniprogram": {
+                        "list": [
+                                {
+                                        "name": "添加书本页面",
+                                        "pathName": "pages/addBook/addBook",
+                                        "query": "",
+                                        "scene": null
+                                }
+                        ]
+                }
+        }
+}

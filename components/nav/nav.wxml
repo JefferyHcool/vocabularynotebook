@@ -1,0 +1,12 @@
+<!-- 头部导航栏部分 -->
+<view class="top-nav">
+        <view class="top-ava">
+                <image  style="width: 90rpx; height: 90rpx; display: block; box-sizing: border-box" mode="aspectFill" src="{{ava}}"></image>
+        </view>
+        <view class="top-title">
+               <text class="greet-title"> {{ greetWord[index]}}</text>
+                <text class="title">单词小本本</text>
+        </view>
+
+
+</view>

@@ -1,0 +1,30 @@
+/* components/bookCorver.wxss */
+
+@import "/app.wxss";
+
+.cover{
+        margin: 40rpx;
+        /* background:linear-gradient(-50deg, rgb(168, 255, 120), rgb(120, 255, 214)); */
+        width: 266rpx;
+        height:  calc(196rpx*2);
+        border-radius: 14rpx;
+        display: flex;
+        flex-direction: column;
+}
+.title{
+        /* background-color: #fff; */
+        padding: 40rpx 20rpx;
+        font-size: 30rpx;
+        font-weight: bold;
+}
+.desc{
+        background-color: #fff;
+        padding: 30rpx 20rpx;
+        opacity: 0.5;
+        font-size: 24rpx;
+
+}
+.count{
+        /* background-color: azure; */
+        margin: 100rpx 20rpx;
+}

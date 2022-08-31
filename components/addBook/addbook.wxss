@@ -1,0 +1,28 @@
+/* components/addBook/addbook.wxss *//* components/bookCorver.wxss */
+
+@import "/app.wxss";
+@import "../../colorui/icon.wxss";
+@import "../../colorui/main.wxss";
+.cover{
+        margin: 40rpx;
+        background-color: #ffffff;
+        /* background:linear-gradient(-50deg, rgb(168, 255, 120), rgb(120, 255, 214)); */
+        width: 266rpx;
+        height:  calc(196rpx*2);
+        border-radius: 14rpx;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.5;
+}
+
+.img{
+        width: 200rpx;
+      opacity: 0.3;
+
+}
+.count{
+        /* background-color: azure; */
+        margin: 100rpx 20rpx;
+}

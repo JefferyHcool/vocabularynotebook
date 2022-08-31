@@ -1,0 +1,6 @@
+<!--components/bookCorver.wxml-->
+<view  class="cover shadow1" style="background: {{cover}};">
+
+        <image class="img" mode="aspectFit" src="../../images/add.png"></image>
+        
+</view>

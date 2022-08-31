@@ -1,0 +1,9 @@
+@import "/colorui/icon.wxss";
+@import "/colorui/main.wxss";
+@import '/app.wxss';
+
+
+.book-area{
+        display: flex;
+        flex-wrap: wrap;
+}

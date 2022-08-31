@@ -1,0 +1,10 @@
+{
+        "usingComponents": {
+                "nav":"/components/nav/nav",
+                "searchbox":"/components/searchbox/searchbox",
+                "wordcards":"/components/wordcards/wordcards",
+                "bookCover":"/components/bookCover/bookCover",
+                "addbook":"/components/addBook/addbook"
+        }
+
+}

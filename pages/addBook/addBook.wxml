@@ -1,0 +1,7 @@
+<!--pages/addBook.wxml-->
+
+<nav></nav>
+
+<view class="addBook" bindtouchstart="page_navigaetBack">
+s
+</view>

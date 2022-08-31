@@ -1,0 +1,12 @@
+<!--pages/index/index.wxml-->
+<nav></nav>
+<!-- <searchbox></searchbox> -->
+<!-- <button bindtap="getUserProfile">登录</button> -->
+<view class="{{isShow ? 'book-area' : 'disable'}}" >
+        <view wx:for="{{wordBook}}" wx:for-item="book">
+                <bookCover  book_id="{{book.id}}" bookname="{{book.name}}" desc="{{book.desc}}" counts="{{book.count}}" cover="{{book.cover}}"></bookCover>
+        </view>
+        <addbook bindtap="NavigateToAddpage"></addbook>
+
+
+</view>
