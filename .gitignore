@@ -12,5 +12,5 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
-
-cloudfunctions/:
+#忽略云函数
+!cloudfunctions/:
