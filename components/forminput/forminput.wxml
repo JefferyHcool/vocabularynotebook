@@ -1,0 +1,8 @@
+<!--components/form_input/forminput.wxml-->
+
+<view class="common">
+
+        <view class="title">{{title}} </view>
+        <input model:value="{{value}}" type="{{type}}" placeholder="{{placeholder}}" disabled="{{disabled}}" maxlength="{{maxlength}}" password="{{password}}"/>
+
+</view>

@@ -1,7 +1,8 @@
 {
         "pages": [
                 "pages/index/index",
-                "pages/addBook/addBook"
+                "pages/addBook/addBook",
+                "pages/sign/sign"
         ],
         "window": {
                 "backgroundColor": "#F6F6F6",

@@ -2,7 +2,7 @@
 
 import cf from './utils/cf'
 wx.cloud.init()
-module.exports= App({
+App({
   getBookinfo(){
           
     let userid=wx.getStorageSync('userinfo')._id

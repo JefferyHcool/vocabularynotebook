@@ -1,0 +1,26 @@
+<!--pages/sign/sign.wxml-->
+<view class="sign">
+
+<nav isNormal='true' title='注册页'></nav>
+
+<view class="form">
+        <view class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar" >
+
+               <button open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+                <view><text>更换头像</text></view>
+                
+                <image src="{{avatar}}"></image>
+                </button>
+        </view>
+
+
+
+</view>
+<forminput id="nickname" title="昵称*"  placeholder="输入昵称" type="nickname" ></forminput>
+<forminput id="phonenumber" title="电话号码" placeholder="输入电话号码"></forminput>
+<view class="option">
+        <button bindtap="uploadProfile" type="primary">确认</button>
+        <button type="default" >取消</button>
+        <button type="warn"  style="background-color: red; color: #fff;">退出</button>
+</view>
+</view>

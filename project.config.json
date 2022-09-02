@@ -1,7 +1,8 @@
 {
         "description": "项目配置文件",
         "packOptions": {
-                "ignore": []
+                "ignore": [],
+                "include": []
         },
         "setting": {
                 "bundle": false,
@@ -31,23 +32,19 @@
                 "packNpmRelationList": [],
                 "minifyWXSS": true,
                 "showES6CompileOption": false,
-                "minifyWXML": true
+                "minifyWXML": true,
+                "babelSetting": {
+                        "ignore": [],
+                        "disablePlugins": [],
+                        "outputPath": ""
+                }
         },
         "compileType": "miniprogram",
-        "libVersion": "2.23.0",
+        "libVersion": "2.25.4",
         "appid": "wx37995cad5d88ce08",
         "projectname": "miniprogram-15",
-        "debugOptions": {
-                "hidedInDevtools": []
-        },
-        "scripts": {},
         "cloudfunctionRoot": "cloudfunctions/",
-        "staticServerOptions": {
-                "baseURL": "",
-                "servePath": ""
-        },
-        "isGameTourist": false,
-        "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+        "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
         "condition": {
                 "search": {
                         "list": []
@@ -67,5 +64,9 @@
                 "miniprogram": {
                         "list": []
                 }
+        },
+        "editorSetting": {
+                "tabIndent": "insertSpaces",
+                "tabSize": 8
         }
 }

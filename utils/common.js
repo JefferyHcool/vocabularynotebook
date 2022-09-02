@@ -3,6 +3,9 @@ async function page_navigateBack(e){
         console.log(current_page)
 
 }
+async function upload(){
+        
+}
 
 module.exports={
 

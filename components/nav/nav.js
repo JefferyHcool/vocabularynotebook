@@ -4,14 +4,24 @@ Component({
          * 组件的属性列表
          */
         properties: {
-
+                isNormal:{
+                        type:Boolean,
+                   value:false},
+                title:{
+                        type:String,
+                        value:''
+                },
+                ava:{
+                        type:String,
+                        value:'../../images/temp_avatar.png'
+                }
         },
 
         /**
          * 组件的初始数据
          */
         data: {
-                ava:"",
+                // ava:"",
                 greetWord:["早上好","中午好","下午好","晚上好"],//打招呼数组
                 index:0
         },
@@ -32,6 +42,21 @@ Component({
                 detached: function () { },
               },
         methods: {
+                touserinfo(){
+                        wx.navigateTo({
+                          url: '../sign/sign',
+                        })
+                },
+                navigateback(){
+                        // let pages=getCurrentPages()
+                        // let current=pages.length-1
+                        // let back_pages=pages[current-1].route
+                        // console.log(back_pages)
+                        wx.navigateBack({
+                          delta: 1,
+                        })
+                  
+                },
                 // 查看头像文件是否存在
                 getUserAva(){
                         let info=wx.getStorageSync('userinfo')
@@ -39,6 +64,11 @@ Component({
                                 this.setData({
                                         ava:info.avatar
                                 })    
+                        }
+                        else{
+                                this.setData({
+                                        ava:"../../images/temp_avatar.png"
+                                })
                         }
                 },
                 // 获取时间 判断问候语

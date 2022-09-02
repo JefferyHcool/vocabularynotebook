@@ -13,6 +13,7 @@ module.exports=async (args,db,openId)=>{
                         _id:openId,
                         name:args.name,
                         avatar:args.avatar,
+                        phone:args.phone,
                         createAt:new Date(),
                         wordBook:[{
                                 bookname:'默认单词本',

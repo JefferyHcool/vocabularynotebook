@@ -1,5 +1,5 @@
 <!--pages/index/index.wxml-->
-<nav></nav>
+<nav ava="{{ava}}"></nav>
 <!-- <searchbox></searchbox> -->
 <!-- <button bindtap="getUserProfile">登录</button> -->
 <view class="{{isShow ? 'book-area' : 'disable'}}" >

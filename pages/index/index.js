@@ -8,8 +8,11 @@ Page({
          * 页面的初始数据
          */
         data: {
+
           isShow:false,
-          wordBook:[]
+          wordBook:[],
+          isLogin:false,
+          ava:"",
         },
 
         NavigateToAddpage(e){
@@ -76,39 +79,67 @@ Page({
               success:res=>{
                 // console.log(res)
                 if (res.confirm){
-                  wx.getUserProfile({
-                    desc: '登录解锁更多功能',
-                    success:res=>{
-                      // console.log(res.userInfo)
-                      wx.setStorageSync('userinfo', res.userInfo)
+                cf("checkuser").then(res=>{
+                        if(!res.data){
+                                wx.navigateTo({
+                                        url: '../sign/sign',
+                                      })
+                        }
+                        else{
+                                cf("login",{},"withLoading").then(res=>{
+                                        console.log(res)
+                                        wx.setStorageSync('userinfo', res.data.userinfo)
+                                        wx.setStorageSync('token', res.data.token)
+                                        cf("getBooks",{},).then(res=>{
+                                                console.log(res)
+                                                wx.setStorageSync('wordbook', res.data.data)
+                                                wx.showToast({
+                                                  title: '登陆成功',
+                                                  icon:"success",
+                                                  duration:2000
+                                                }).then(res=>{
+                                                        wx.redirectTo({
+                                                          url: 'index',
+                                                        })
+                                                })
+                                        })
+                                })
+                        }
+                })
+                       
+                //   wx.getUserProfile({
+                //     desc: '登录解锁更多功能',
+                //     success:res=>{
+                //       // console.log(res.userInfo)
+                //       wx.setStorageSync('userinfo', res.userInfo)
                       
-                      wx.showToast({
-                        title: '登录成功',
-                        icon:'success',
-                        duration:5000,
-                      }).then(()=>{
-                        let userInfo=wx.getStorageSync("userinfo")
-                        cf("login",{name:userInfo.nickName,avatar:userInfo.avatarUrl}).then(res=>{
-                          console.log(res)
+                //       wx.showToast({
+                //         title: '登录成功',
+                //         icon:'success',
+                //         duration:5000,
+                //       }).then(()=>{
+                //         let userInfo=wx.getStorageSync("userinfo")
+                //         cf("login",{name:userInfo.nickName,avatar:userInfo.avatarUrl}).then(res=>{
+                //           console.log(res)
                           
-                          wx.setStorageSync('token', res.data.token)
-                          wx.setStorageSync('userinfo', res.data.userinfo)
-                          // this.getBookinfo()
+                //           wx.setStorageSync('token', res.data.token)
+                //           wx.setStorageSync('userinfo', res.data.userinfo)
+                //           // this.getBookinfo()
                           
-                          wx.redirectTo({
-                            url: 'index',
-                          })
-                         }).catch(err=>{
-                           console.log(err)
-                         })
+                //           wx.redirectTo({
+                //             url: 'index',
+                //           })
+                //          }).catch(err=>{
+                //            console.log(err)
+                //          })
                         
-                      })
-                    },
-                    fail:err=>{
-                      console.error(err)
+                //       })
+                //     },
+                //     fail:err=>{
+                //       console.error(err)
                       
-                    }
-                  })
+                //     }
+                //   })
       
       
                  
@@ -159,7 +190,8 @@ Page({
           if(userinfo){
             this.setData({
               isShow:true,
-              wordBook:wordbook
+              wordBook:wordbook,
+              ava:userinfo.avatar
             })
             
           }
@@ -180,6 +212,7 @@ Page({
         // },
         onLoad: function (options) {
           let login= this.Checklogin()
+
           
 
 
@@ -189,9 +222,9 @@ Page({
          * 生命周期函数--监听页面初次渲染完成
          */
         onReady: function () {
-          this.getBookinfo()
+        //   this.getBookinfo()
           
-          this.getInfo()
+          
           
         },
 
@@ -199,7 +232,7 @@ Page({
          * 生命周期函数--监听页面显示
          */
         onShow: async function () {
-
+                this.getInfo()
          
         },
 

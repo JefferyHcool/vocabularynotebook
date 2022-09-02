@@ -1,4 +1,33 @@
 /* components/nav/nav.wxss */
+@import "../../colorui/icon.wxss";
+@import "../../colorui/main.wxss";
+
+
+.arrow{
+        position: absolute;
+        left: 20rpx;
+        top: 106rpx;
+}
+.normal{
+        display:none
+}
+.normal-show{
+
+         height: 7rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        font-size:1.5rem;
+        font-weight:bold
+}
+
+.page-title{
+        /* background-color:red; */
+        margin-top:2rem;
+}
 .top-nav{
         /* margin-top: 1rem; */
         /* background-color: rgb(247, 0, 0); */

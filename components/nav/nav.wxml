@@ -1,6 +1,9 @@
 <!-- 头部导航栏部分 -->
-<view class="top-nav">
-        <view class="top-ava">
+<view class="{{isNormal?'normal':'top-nav' }}">
+        <!-- <view class="title">注册页</view> -->
+  
+        
+        <view class="top-ava" bindtap="touserinfo">
                 <image  style="width: 90rpx; height: 90rpx; display: block; box-sizing: border-box" mode="aspectFill" src="{{ava}}"></image>
         </view>
         <view class="top-title">
@@ -8,5 +11,12 @@
                 <text class="title">单词小本本</text>
         </view>
 
+
+
+</view>
+
+<view class="{{isNormal?'normal-show':'normal' }}">
+        <text  class="arrow cuIcon-back lg " bindtap="navigateback" ></text>
+        <view class="page-title">{{title}}</view>
 
 </view>

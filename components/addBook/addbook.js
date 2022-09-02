@@ -5,7 +5,7 @@ Component({
          */
         properties: {
 
-        },
+        },      
 
         /**
          * 组件的初始数据
