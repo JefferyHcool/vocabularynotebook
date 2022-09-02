@@ -1,6 +1,7 @@
 // pages/index/index.js
 import cf from "../../utils/cf"
 import check from"../../app"
+// const _cache =require("../../utils/cache_image")
 // import { promises } from "dns"
 Page({
 
@@ -87,9 +88,12 @@ Page({
                         }
                         else{
                                 cf("login",{},"withLoading").then(res=>{
-                                        console.log(res)
+
                                         wx.setStorageSync('userinfo', res.data.userinfo)
                                         wx.setStorageSync('token', res.data.token)
+
+                                        console.log(res)
+              
                                         cf("getBooks",{},).then(res=>{
                                                 console.log(res)
                                                 wx.setStorageSync('wordbook', res.data.data)
@@ -187,12 +191,14 @@ Page({
         getInfo(){
           let userinfo= wx.getStorageSync('userinfo')
           let wordbook=wx.getStorageSync('wordbook')
+        //   let ava_cache=wx.getStorageSync('ava_cache')
           if(userinfo){
             this.setData({
               isShow:true,
               wordBook:wordbook,
               ava:userinfo.avatar
             })
+           
             
           }
           else if(!userinfo){
@@ -200,6 +206,7 @@ Page({
               isShow:false
             })
           }
+        //   _cache._cacheFromId(userinfo.avatar)
         },
         /**
          * 生命周期函数--监听页面加载

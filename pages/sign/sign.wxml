@@ -16,11 +16,11 @@
 
 
 </view>
-<forminput id="nickname" title="昵称*"  placeholder="输入昵称" type="nickname" ></forminput>
-<forminput id="phonenumber" title="电话号码" placeholder="输入电话号码"></forminput>
+<forminput value="{{nickname}}"id="nickname" title="昵称*"  placeholder="输入昵称" type="nickname" ></forminput>
+<forminput value="{{phonenumber}}" id="phonenumber" title="电话号码" placeholder="输入电话号码"></forminput>
 <view class="option">
         <button bindtap="uploadProfile" type="primary">确认</button>
-        <button type="default" >取消</button>
-        <button type="warn"  style="background-color: red; color: #fff;">退出</button>
+        <button bindtap="back" type="default" >取消</button>
+        <button bindtap="logout" type="warn"  style="background-color: red; color: #fff;">退出</button>
 </view>
 </view>

@@ -1,8 +1,8 @@
 <!--components/form_input/forminput.wxml-->
 
-<view class="common">
+<view class="common {{isTop==true?'border-top':'border-bottom'}}">
 
         <view class="title">{{title}} </view>
-        <input model:value="{{value}}" type="{{type}}" placeholder="{{placeholder}}" disabled="{{disabled}}" maxlength="{{maxlength}}" password="{{password}}"/>
+        <input  model:value="{{value}}" type="{{type}}" placeholder="{{placeholder}}" disabled="{{disabled}}" maxlength="{{maxlength}}" password="{{password}}"/>
 
 </view>

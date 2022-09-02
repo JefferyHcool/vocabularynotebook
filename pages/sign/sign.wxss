@@ -52,7 +52,7 @@ button image{
         top: -18rpx;
 }
 .option{
-        margin-top: 400rpx;
+        margin-top: 200rpx;
         background-color: #fff;
         /* height: 800rpx; */
 }

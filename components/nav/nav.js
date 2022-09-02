@@ -59,6 +59,7 @@ Component({
                 },
                 // 查看头像文件是否存在
                 getUserAva(){
+                        // let ava_cache=wx.getStorageSync('ava_cache')
                         let info=wx.getStorageSync('userinfo')
                         if(info){
                                 this.setData({

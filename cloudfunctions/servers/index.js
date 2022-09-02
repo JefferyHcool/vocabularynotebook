@@ -7,6 +7,7 @@ const login=require('./func/login.js')
 const jwt=require("jsonwebtoken")
 const checkuser=require("./func/checkuser")
 const uploadpic=require("./func/uploadpic")
+const updateUser=require("./func/updateUser")
 cloud.init()
 const jwtSecret='hjwylthjwylthjwyltysys'
 const db=cloud.database();
@@ -36,6 +37,9 @@ exports.main = async (event, context) => {
                 case "uploadpic":
                         let upload_res=await uploadpic(event.args.filepath,event.args.content,userid)
                         return await{mesg:200,data:upload_res}
+                case "updateUser":
+                        let updateUser_data=await updateUser(args,db,userid)
+                        return await{mesg:200,data:updateUser_data}
         }
        
 }

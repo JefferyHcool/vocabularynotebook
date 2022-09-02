@@ -35,6 +35,10 @@ Component({
                 value:{
                         type:String,
                         value:""
+                },
+                isTop:{
+                        type:Boolean,
+                        value:true
                 }
         },
 

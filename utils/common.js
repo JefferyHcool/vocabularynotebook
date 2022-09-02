@@ -1,6 +1,14 @@
 async function page_navigateBack(e){
-        let current_page=getCurrentPages()
-        console.log(current_page)
+
+                // let pages=getCurrentPages()
+                // let current=pages.length-1
+                // let back_pages=pages[current-1].route
+                // console.log(back_pages)
+                wx.navigateBack({
+                  delta: 1,
+                })
+          
+
 
 }
 async function upload(){

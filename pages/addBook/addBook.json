@@ -1,7 +1,8 @@
 {
   
     "usingComponents": {
-      "nav":"/components/nav/nav"
+      "nav":"/components/nav/nav",
+      "forminput":"/components/forminput/forminput"
 
   }
 }

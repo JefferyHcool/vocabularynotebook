@@ -1,7 +1,15 @@
 <!--pages/addBook.wxml-->
+<nav isNormal='true' ></nav>
 
-<nav></nav>
+<view class="addBook">
 
-<view class="addBook" bindtouchstart="page_navigaetBack">
-s
+<view class="form">
+        <view class="title">
+                新建单词本
+        </view>
+
+        <forminput isTop="{{0}}" title="名称" placeholder="输入书本名字"></forminput>
+</view>
+
+
 </view>

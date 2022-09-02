@@ -8,9 +8,17 @@
         padding: 1rpx 30rpx;
         align-items: center;
         justify-content: space-between;
+       
+        
+
+
+
+}
+.border-top{
         border-top: 1rpx solid #eee;
-
-
+}
+.border-bottom{
+        border-bottom: 1rpx solid #eee;
 }
 .title{
         width: 22%;
