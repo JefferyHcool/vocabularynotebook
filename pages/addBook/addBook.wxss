@@ -25,3 +25,6 @@
 forminput{
         margin-top: 80rpx;
 }
+.form button{
+        margin-top: 80rpx;
+}

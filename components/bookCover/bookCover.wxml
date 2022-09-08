@@ -1,5 +1,13 @@
 <!--components/bookCorver.wxml-->
-<view class="cover shadow1" style="background: {{cover}};">
+<view mut-bind:longpress="MoveToEdit" class="cover shadow1" style="background: {{cover}};">
+        <view animation="{{animationData}}" class="{{isEdit?'edit':'disable'}}">
+                
+
+                <view bindtap="rename" hover-class="bhover" class="rename">重命名</view>
+
+                <view  hover-class="bhover" class="del">删除</view>
+                <view  bindtap="cancel" hover-class="bhover" class="cancel">取消</view>
+        </view>
         <view class="title">{{bookname}}</view>
         <view class="desc">{{desc}}</view>
         <view class="count">{{counts}}词</view>

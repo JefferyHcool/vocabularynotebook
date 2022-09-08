@@ -8,7 +8,10 @@
                 新建单词本
         </view>
 
-        <forminput isTop="{{0}}" title="名称" placeholder="输入书本名字"></forminput>
+        <forminput id="bookname" isTop="{{0}}" title="名称" placeholder="输入书本名字"></forminput>
+        <forminput id="bookdesc" isTop="{{0}}" title="简介" placeholder="简要描述次书"></forminput>
+        
+        <button type="primary" bindtap="getbookname">确定</button>
 </view>
 
 

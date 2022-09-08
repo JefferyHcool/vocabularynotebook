@@ -15,16 +15,10 @@ module.exports=async (args,db,openId)=>{
                         avatar:args.avatar,
                         phone:args.phone,
                         createAt:new Date(),
-                        wordBook:[{
-                                bookname:'默认单词本',
-                                id:(Math.random() + new Date().getTime()).toString(32).slice(0,8),
-                                count:0,
-                                desc:'第一本单词本',
-                                createAt:new Date(),
-                        }],
+                        wordBook:[],
                 }
                 await db.collection("user").add({data});
-                await book({desc:data.wordBook[0].desc,book_name:data.wordBook[0].bookname,createAt:data.createAt,openid:data._id},db,data.wordBook[0].id);
+                await book({},db,openId);
                 return data;
         }
 

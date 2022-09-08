@@ -132,9 +132,7 @@ Page({
                                 console.log("no change")
                                 filid=avatar
                                 let ava_cache=wx.getStorageSync('ava_cache')
-                                if(!ava_cache){
-                                        _cache._cache(this.data.avatar)
-                                }
+
                         }
                         
                         console.log("用户已注册")

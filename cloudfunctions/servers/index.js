@@ -26,7 +26,7 @@ exports.main = async (event, context) => {
                 case 'getUser':
                         return await getUser();
                 case 'getBook':
-                        let getBook=await getWorkbook(args,db,{})
+                        let getBook=await getWorkbook(args,db,userid)
                         return await {mesg:200,data:getBook};
                 case "getBooks":
                         let getBooks_data=await getBooks(userid,db)

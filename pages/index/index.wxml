@@ -2,11 +2,16 @@
 <nav ava="{{ava}}"></nav>
 <!-- <searchbox></searchbox> -->
 <!-- <button bindtap="getUserProfile">登录</button> -->
-<view class="{{isShow ? 'book-area' : 'disable'}}" >
-        <view wx:for="{{wordBook}}" wx:for-item="book">
-                <bookCover  book_id="{{book.id}}" bookname="{{book.name}}" desc="{{book.desc}}" counts="{{book.count}}" cover="{{book.cover}}"></bookCover>
+<view  class="{{isShow ? 'book-area' : 'disable'}}" >
+        <view class="book" wx:for="{{wordBook}}" wx:for-item="book" wx:key="{{book_id}}">
+                <bookCover  isEdit="{{isEdit}}" composed='true'   book_id="{{book._id}}" bookname="{{book.name}}" desc="{{book.desc}}" counts="{{book.count}}" cover="{{book.cover}}"></bookCover>
+                
         </view>
-        <addbook bindtap="NavigateToAddpage"></addbook>
+        
+        <addbook  bindtap="NavigateToAddpage"></addbook>
+        
 
+
+        <!-- <view  bindtap="cancelEdit" class="{{isShow ? 'empty' : 'disable'}}" >s</view> -->
 
 </view>

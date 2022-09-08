@@ -1,5 +1,6 @@
 <!--components/wordcards/wordcards.wxml-->
 <view class="box">
+
   <view class="card radius shadow-blur">
 
     <view class="word">

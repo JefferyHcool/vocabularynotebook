@@ -14,6 +14,7 @@ Page({
           wordBook:[],
           isLogin:false,
           ava:"",
+          isEdit:false
         },
 
         NavigateToAddpage(e){
@@ -187,6 +188,23 @@ Page({
                 }
 
         },
+        /**
+         * 重新获取数据刷新
+         */
+        async fresh(){
+                let time=wx.getStorageSync('isFresh')
+                if(time){
+                        if(time!=Date.now()){
+                                this.setData({
+                                        isShow:true,
+                                        wordBook:wordbook,
+                                        ava:userinfo.avatar
+                                })
+                                wx.removeStorageSync('isFresh')
+                              
+                        }
+                }
+        },
         /**查看是否存在数据 */
         getInfo(){
           let userinfo= wx.getStorageSync('userinfo')
@@ -218,6 +236,7 @@ Page({
         //   })
         // },
         onLoad: function (options) {
+
           let login= this.Checklogin()
 
           
@@ -229,16 +248,52 @@ Page({
          * 生命周期函数--监听页面初次渲染完成
          */
         onReady: function () {
+
+                this.getInfo()
         //   this.getBookinfo()
           
           
           
+        },
+        cancelEdit(e,c){
+                console.log(e)
+                let flag=this.data.isEdit;
+                if(flag){
+                        this.setData({
+                                isEdit:false
+                        })
+                }
+        },
+        /**
+         * 
+         * @param {*} e 
+         * 删除单词本或重命名 
+         */
+        async MoveTodel(e,c){
+                
+                // console.log('tap Weixin', JSON.stringify(e))
+                wx.vibrateShort({
+                        type:"heavy",
+                })
+                this.setData({
+                        isEdit:true
+                })
+                const query = this.createSelectorQuery();
+                let com=query.select("#",e.target.id)
+
+
+                console.log(com)
+                // console.log(com._selectorQuery._defaultComponent.data.isEdit)
+                
+                
+
         },
 
         /**
          * 生命周期函数--监听页面显示
          */
         onShow: async function () {
+                
                 this.getInfo()
          
         },
